@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root {
+    --white-color: white;
+    --color-h3-mydata: rgb(150, 150 ,150);
+    --red-color: red;
+    --black-color: black;
+    --link:lightskyblue;
+    --link-visited: lightcoral;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    letter-spacing: 0.01rem;
+    word-spacing: 2rem;
+    font-size: 6.5rem;
+}
+
+h2 {
+    letter-spacing: 1rem;
+    color: var(--white-color);
+    word-spacing: 2rem;
+    font-size: 5.5rem;
+    text-shadow: -3px -3px 10px var(--white-color);
+}
+
+h3 {
+    font-size: 5.5rem;
+    color: var(--color-h3-mydata);
+}
+
+p{
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    padding: 1rem;
+    font-size: 1.7rem;
+}
+ul li{
+    font-size: 1.5rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-image: url(./img/subtle-prism.svg) ;
+    /* background-image: url(../img/aguia-centralizada.png); */
+    min-height: 100vh;
+}
+
+
+.main-eagle {
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.mydata {
+    margin: auto auto;
+}
+
+.mydata>a {
+    display: block;
+    border: none;
+    margin: 3rem auto;
+    width: 10rem;
+    height: 10rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+a > button {
+    visibility: hidden;
+}
+
+.mydata .linkedin {
+    background-image: url(./img/logo-linkedin.png);
+    opacity: 50%;
+    background-position: center;
+    transition: all 600ms ease-in-out;
+}
+
+.mydata .whatsapp {
+    background-image: url(./img/wpplogo.png);
+    opacity: 50%;
+    background-position: center;
+    transition: all 600ms ease-in-out;
+}
+
+.mydata .github {
+    background-image: url(./img/github.png);
+    opacity: 50%;
+    background-position: center;
+    transition: all 600ms ease-in-out;
+}
+
+.mydata .instagram {
+    background-image: url(./img/logo-insta.png);
+    opacity: 50%;
+    background-position: center;
+    transition: all 600ms ease-in-out;
+}
+
+.mydata .instagram:hover, .mydata .github:hover, .mydata .whatsapp:hover, .mydata .linkedin:hover {
+    opacity: 100%;
+    border: none;
+}
+
+a p {
+    font-size: 1.1rem;
+    letter-spacing: 0.5rem;
+    color: var(--black-color);
+}
+
+a h1 {
+    
+    color: var(--red-color);
+    opacity: 40%;
+    transition: all 600ms ease-in-out;
+
+}
+
+.main-eagle h1:hover {
+    opacity: 100%;
+    font-size: 7rem;
+    z-index: 5;
+}
+
+.about-me {
+    background-image: url(./img/WhatsApp\ Image\ 2021-10-25\ at\ 19.43.49.jpeg);
+    background-size: 100%;
+    background-position: -40rem -80em;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    /* background-image: url(../img/aguia-centralizada.png); */
+    min-height: 100vh;
+}
+
+.about-me .img-me {
+    margin: auto auto;
+    border-radius: 50%;
+}
+.descrition-me {
+    background-color: var(--white-color);
+    padding: 2rem;
+}
+
+.trace {
+    height: 0.2rem;
+    border: 0.1rem solid var(--black-color);
+    width: 30rem;
+}
+
+.study-my {
+    padding-top: 2rem;
+}
+
+.study-my a:link {
+    color: var(--link);
+}
+
+.study-my a:visited {
+    color: var(--link-visited);
+} 
+.other-studies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+    padding: 2rem;
+    align-items: center;
+   
+}
+.home-page button {
+    visibility: visible;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    border: none;
+    background-color: var(--link-visited);
+    width: 100%;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: all 300ms ease-in-out;
+}
+.home-page button:hover {
+    background-color: rgb(240, 83, 83);
+}
+
+@media (max-width: 782px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .about-me {
+        background-image: none;
+        grid-template-columns: 1fr;
+    }
+}
